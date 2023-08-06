@@ -1,5 +1,3 @@
-const bunyan = require('bunyan');
-const log = require('../../index');
 
 // define default config, but allow overrides from ENV vars
 let config = {
@@ -13,7 +11,6 @@ let config = {
 Object.keys(config).forEach(key => {
   if(process.env[key] === undefined){
     console.log(`[NOTICE] Value for key '${key}' not found in ENV, using default value.  See app/config/config.js`);
-    log.info(`[NOTICE] Value for key '${key}' not found in ENV, using default value. See app/config/config.js`);
   } else {
     config[key] = process.env[key]
   }
