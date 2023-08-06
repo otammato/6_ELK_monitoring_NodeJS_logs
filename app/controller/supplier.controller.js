@@ -1,10 +1,6 @@
 const Supplier = require("../models/supplier.model.js");
 const log = require('../../index'); // Verify the path is correct
 
-// Now you can use the logger to log messages:
-log.info('Supplier model initialized.');
-
-
 const {body, validationResult} = require("express-validator");
 
 
