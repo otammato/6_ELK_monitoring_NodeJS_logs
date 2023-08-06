@@ -1,4 +1,3 @@
-# ELK2
 
 # ELK (Elastic search, Logstash, Kibana) for monotoring of logs of a Node.js Application
 
