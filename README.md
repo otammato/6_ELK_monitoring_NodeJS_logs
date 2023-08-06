@@ -1,7 +1,5 @@
 # ELK2
 
-<img width="1000" alt="Screenshot 2023-08-06 at 22 26 34" src="https://github.com/otammato/ELK2/assets/104728608/df9b12dd-3c35-4259-9e52-aad3b621c89c">
-
 # ELK (Elastic search, Logstash, Kibana) for monotoring of logs of a Node.js Application
 
 
@@ -86,7 +84,7 @@ To launch this Jenkins pipeline, you need the following prerequisites:
 
 ## Pipeline Overview
 
-<img width="1000" alt="Screenshot 2023-07-29 at 14 39 50" src="https://github.com/otammato/4_Jenkins_pipeliline_build_deploy_nodejs_kubernetes/assets/104728608/03d7748d-6855-4508-bfc0-0c10484cc838">
+<img width="1000" alt="Screenshot 2023-08-06 at 22 26 34" src="https://github.com/otammato/ELK2/assets/104728608/df9b12dd-3c35-4259-9e52-aad3b621c89c">
 <img width="1000" alt="Screenshot 2023-07-04 at 18 59 37" src="https://github.com/otammato/Jenkins_pipeliline_build_deploy_nodejs_kubernetes/assets/104728608/22f1b495-5c8c-43de-90d7-13ec0b83db3f">
 
 <br><br>
