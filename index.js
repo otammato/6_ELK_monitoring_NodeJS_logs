@@ -86,4 +86,3 @@ app.listen(app_port, () => {
   log.info(`Server is running on port ${app_port}!`);
 });
 
-module.exports = log;
