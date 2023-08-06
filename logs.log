@@ -1,0 +1,98 @@
+[NOTICE] Value for key 'APP_DB_HOST' not found in ENV, using default value.  See app/config/config.js
+[NOTICE] Value for key 'APP_DB_USER' not found in ENV, using default value.  See app/config/config.js
+[NOTICE] Value for key 'APP_DB_PORT' not found in ENV, using default value.  See app/config/config.js
+[NOTICE] Value for key 'APP_DB_PASSWORD' not found in ENV, using default value.  See app/config/config.js
+[NOTICE] Value for key 'APP_DB_NAME' not found in ENV, using default value.  See app/config/config.js
+Server is running on port 3000.
+ReferenceError: err is not defined
+    at /home/ubuntu/index.js:63:14
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/node_modules/express/lib/router/index.js:328:13)
+    at /home/ubuntu/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/home/ubuntu/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/node_modules/express/lib/router/index.js:280:10)
+    at favicon (/home/ubuntu/node_modules/serve-favicon/index.js:68:7)
+    at Layer.handle [as handle_request] (/home/ubuntu/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/home/ubuntu/node_modules/express/lib/router/index.js:328:13)
+    at /home/ubuntu/node_modules/express/lib/router/index.js:286:9
+_http_outgoing.js:530
+    throw new ERR_HTTP_HEADERS_SENT('set');
+    ^
+
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:530:11)
+    at ServerResponse.header (/home/ubuntu/node_modules/express/lib/response.js:794:10)
+    at ServerResponse.send (/home/ubuntu/node_modules/express/lib/response.js:174:12)
+    at done (/home/ubuntu/node_modules/express/lib/response.js:1035:10)
+    at /home/ubuntu/node_modules/mustache-express/mustache-express.js:196:5
+    at /home/ubuntu/node_modules/mustache-express/mustache-express.js:153:10
+    at /home/ubuntu/node_modules/mustache-express/mustache-express.js:135:11
+    at loadAllPartials (/home/ubuntu/node_modules/mustache-express/mustache-express.js:91:10)
+    at /home/ubuntu/node_modules/mustache-express/mustache-express.js:119:10
+    at /home/ubuntu/node_modules/async/dist/async.js:251:13 {
+  code: 'ERR_HTTP_HEADERS_SENT'
+}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":26029,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T09:20:51.126Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":26049,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T09:22:33.988Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":26067,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T09:24:05.571Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":26119,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T09:32:17.792Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":26119,"level":30,"msg":"error 404","time":"2023-08-06T09:32:22.677Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":30772,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T10:00:06.120Z","v":0}
+{"name":"nodejs-tick-elk-bunyan","hostname":"ip-172-31-85-40","pid":33109,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T10:13:28.608Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":33165,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T10:22:59.866Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":33180,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T10:23:48.048Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3491,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T12:49:15.488Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3491,"level":30,"msg":"Received request at /","time":"2023-08-06T12:49:55.265Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3491,"level":20,"msg":"error 404","time":"2023-08-06T12:50:05.385Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3518,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T12:51:40.413Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3558,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T12:56:56.775Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3558,"level":20,"msg":"error 404 event","time":"2023-08-06T12:57:28.861Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3592,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T13:00:58.821Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3592,"level":30,"msg":"Received request at /","time":"2023-08-06T13:01:06.515Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3697,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T13:20:18.465Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"Server is running on port 3000!","time":"2023-08-06T13:28:08.946Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /","time":"2023-08-06T13:29:00.123Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:29:00.265Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:29:00.351Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:29:00.354Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:29:00.355Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:29:00.356Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /suppliers","time":"2023-08-06T13:29:02.991Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:29:03.109Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:29:03.111Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:29:03.113Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:29:03.114Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:29:03.115Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /","time":"2023-08-06T13:31:47.510Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:31:47.618Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:31:47.705Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:31:47.706Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:31:47.708Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:31:47.709Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /s","time":"2023-08-06T13:32:55.084Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":20,"msg":"error 404 event","time":"2023-08-06T13:32:55.085Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:32:55.185Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:32:55.272Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:32:55.274Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:32:55.276Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:32:55.278Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:37:09.739Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /suppliers/","time":"2023-08-06T13:38:47.996Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:38:48.116Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:38:48.211Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:38:48.213Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:38:48.214Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:38:48.215Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /suppliers","time":"2023-08-06T13:39:26.237Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:39:26.336Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:39:26.424Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:39:26.425Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:39:26.426Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:39:26.428Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /supplier","time":"2023-08-06T13:39:42.092Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":20,"msg":"error 404 event","time":"2023-08-06T13:39:42.093Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/bootstrap.min.css","time":"2023-08-06T13:39:42.192Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /css/base.css","time":"2023-08-06T13:39:42.278Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /img/coffee.png","time":"2023-08-06T13:39:42.280Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/jquery-3.6.0.min.js","time":"2023-08-06T13:39:42.282Z","v":0}
+{"name":"combined-log","hostname":"ip-172-31-85-40","pid":3742,"level":30,"msg":"GET /js/bootstrap.min.js","time":"2023-08-06T13:39:42.283Z","v":0}
