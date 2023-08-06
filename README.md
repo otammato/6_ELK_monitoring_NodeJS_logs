@@ -63,8 +63,6 @@ from `app/config/config.js` will be used
 - Docker-compose
 - NodeJS
 - bunyan (a logging library for Node.js that provides structured and extensible logging capabilities)
-- MySQL
-- JS + Mocha, Chai
 - AWS Cloud
 - AWS EC2 (Linux Ubuntu 22.04)
 
