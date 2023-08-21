@@ -110,5 +110,6 @@ The architecture entails several items:
 1.  (the page is currently under development)
 
 ## Steps:
-2.  sudo apt  install docker-compose
+1. sudo apt update
+2. sudo apt  install docker-compose
 3.  
