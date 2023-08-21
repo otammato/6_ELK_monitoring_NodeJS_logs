@@ -108,3 +108,7 @@ The architecture entails several items:
 ## Final result
 
 1.  (the page is currently under development)
+
+## Steps:
+2.  sudo apt  install docker-compose
+3.  
