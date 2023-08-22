@@ -87,7 +87,7 @@ To launch this Jenkins pipeline, you need the following prerequisites:
 
 <br><br>
 
-The architecture entails several items:
+The architecture entails the following:
 
 1. **An AWS EC2 instance**: With installed Docker, Git, Node, npm.
 
