@@ -165,7 +165,7 @@ Detailed description of the implemented logging solution based on Bunyan and Log
 
 ### **Logging Solution Overview**
 
-We've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
+I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
 ### **1. Logger Configuration**
 
