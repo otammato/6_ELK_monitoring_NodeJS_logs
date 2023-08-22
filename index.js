@@ -1,66 +1,48 @@
-const bunyan = require('bunyan');
-const logstashStream = require('bunyan-logstash-tcp').createStream({
-  host: '172.18.0.4',
-  port: 5000,
-});
-
-const log = bunyan.createLogger({
-  name: 'combined-log',
-  streams: [
-    {
-      path: './logs.log',
-    },
-    {
-      level: 'debug',
-      stream: process.stdout,
-    },
-    {
-      level: 'debug',
-      type: 'raw',
-      stream: logstashStream,
-    },
-  ],
-  level: 'debug',
-});
-
-// Override the console methods
-console.log = (...args) => {
-  log.info(args.join(' '));
-};
-
-console.error = (...args) => {
-  log.error(args.join(' '));
-};
-
-console.warn = (...args) => {
-  log.warn(args.join(' '));
-};
-
-console.debug = (...args) => {
-  log.debug(args.join(' '));
-};
-
-// Import the config AFTER the console overrides
-const config = require("./app/config/config.js");
-
 const express = require('express');
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const supplier = require("./app/controller/supplier.controller");
 const mustacheExpress = require("mustache-express");
 const favicon = require('serve-favicon');
-const app_port = process.env.APP_PORT || 3000;
+const { config, mainLogger } = require('./config.js');
 
 const app = express();
+const app_port = process.env.APP_PORT || 3000;
 
+// Create a child logger for app-related logs.
+// This differentiates logs coming from the app versus the configuration.
+const appLogger = mainLogger.child({ source: 'app' });
+
+// Overriding console methods to integrate with our Bunyan logger
+// This ensures that any console log, warn, debug, or error call
+// gets captured by Bunyan and is sent to the appropriate streams.
+console.log = (...args) => {
+    appLogger.info(args.join(' '));
+};
+
+console.error = (...args) => {
+    appLogger.error(args.join(' '));
+};
+
+console.warn = (...args) => {
+    appLogger.warn(args.join(' '));
+};
+
+console.debug = (...args) => {
+    appLogger.debug(args.join(' '));
+};
+
+// Middleware to log every incoming request.
+// It captures the HTTP method and the requested URL.
 const logRequests = (req, res, next) => {
-  log.info(`${req.method} ${req.url}`);
-  next();
+    appLogger.info(`${req.method} ${req.url}`);
+    next();
 };
 
 app.use(logRequests);
+
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.options("*", cors());
 app.engine("html", mustacheExpress());
@@ -69,50 +51,43 @@ app.set("views", __dirname + "/views");
 app.use(express.static('public'));
 app.use(favicon(__dirname + "/public/img/favicon.ico"));
 
-// APP endpoints
+// Various routes for the app with associated logging statements.
+
 app.get("/", (req, res) => {
-  log.info("Routes: GET /: Home route which renders a homepage.");
-  res.render("home", {});
+    res.render("home", {});
 });
 
 app.get("/suppliers/", (req, res) => {
-  log.info("Routes: GET /suppliers/: Lists all suppliers.");
-  supplier.findAll(req, res);
+    supplier.findAll(req, res);
 });
 
 app.get("/supplier-add", (req, res) => {
-  log.info("Routes: GET /supplier-add: Displays the form to add a new supplier.");
-  res.render("supplier-add", {});
+    res.render("supplier-add", {});
 });
 
 app.post("/supplier-add", (req, res) => {
-  log.info("Routes: POST /supplier-add: Endpoint to add a new supplier.");
-  supplier.create(req, res);
+    supplier.create(req, res);
 });
 
 app.get("/supplier-update/:id", (req, res) => {
-  log.info(`Routes: GET /supplier-update/${req.params.id}: Displays the form to update a supplier with a specific ID.`);
-  supplier.findOne(req, res);
+    supplier.findOne(req, res);
 });
 
 app.post("/supplier-update", (req, res) => {
-  log.info("Routes: POST /supplier-update: Endpoint to update the supplier details.");
-  supplier.update(req, res);
+    supplier.update(req, res);
 });
 
 app.post("/supplier-remove/:id", (req, res) => {
-  log.info(`Routes: POST /supplier-remove/${req.params.id}: Endpoint to remove a supplier with a specific ID.`);
-  supplier.remove(req, res);
+    supplier.remove(req, res);
 });
 
-// handle 404
-app.use(function (req, res, next) {
-  log.debug("error 404 event");
-  res.status(404).render("404", {});
+// Handle 404 errors and log them
+app.use(function(req, res, next) {
+    appLogger.debug("error 404 event");
+    res.status(404).render("404", {});
 });
 
-// set port, listen for requests
+// Starting the server and logging the event
 app.listen(app_port, () => {
-  console.log(`Server is running on port ${app_port}.`);
+    console.log(`Server is running on port ${app_port}.`);
 });
-
