@@ -111,6 +111,7 @@ The architecture entails the following:
 1.  
 
 ## Steps:
+### Install Docker-compose
 1. `sudo apt update`
 2. `sudo apt  install docker-compose`
 3. `docker-compose up`
