@@ -91,7 +91,7 @@ The architecture entails the following:
 
 1. **An AWS EC2 instance**: With installed Docker, Git, Node, npm.
 
-2. **A NodeJS app**: Performs simple CRUD operations on the database(MySQL). Uses "bunyan" library for logging.
+2. **A NodeJS app**: Performs simple CRUD operations on the database(MySQL). Utilizes "bunyan" library for logging.
 
 3. **A Docker-compose file**: Launches containers:
    - Elastic Search
