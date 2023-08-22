@@ -1,24 +1,14 @@
-const express = require('express');
 const bunyan = require('bunyan');
 const logstashStream = require('bunyan-logstash-tcp').createStream({
-  host: '172.20.0.3',  // Replace 'logstash' with the hostname or IP of your Logstash container.
-  port: 5000,  // Use the same port as specified in the Logstash configuration.
+  host: '172.18.0.4',
+  port: 5000,
 });
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const supplier = require("./app/controller/supplier.controller");
-const app = express();
-const mustacheExpress = require("mustache-express");
-const favicon = require('serve-favicon');
-const app_port = process.env.APP_PORT || 3000;
-
-const bunyanDebugStream = require('bunyan-debug-stream');
 
 const log = bunyan.createLogger({
   name: 'combined-log',
   streams: [
     {
-      path: './logs.log', // Original file stream (optional)
+      path: './logs.log',
     },
     {
       level: 'debug',
@@ -33,6 +23,7 @@ const log = bunyan.createLogger({
   level: 'debug',
 });
 
+// Override the console methods
 console.log = (...args) => {
   log.info(args.join(' '));
 };
@@ -49,6 +40,18 @@ console.debug = (...args) => {
   log.debug(args.join(' '));
 };
 
+// Import the config AFTER the console overrides
+const config = require("./app/config/config.js");
+
+const express = require('express');
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const supplier = require("./app/controller/supplier.controller");
+const mustacheExpress = require("mustache-express");
+const favicon = require('serve-favicon');
+const app_port = process.env.APP_PORT || 3000;
+
+const app = express();
 
 const logRequests = (req, res, next) => {
   log.info(`${req.method} ${req.url}`);
@@ -56,9 +59,7 @@ const logRequests = (req, res, next) => {
 };
 
 app.use(logRequests);
-
 app.use(bodyParser.json());
-// parse requests of content-type: application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 app.options("*", cors());
@@ -111,9 +112,7 @@ app.use(function (req, res, next) {
 });
 
 // set port, listen for requests
-
 app.listen(app_port, () => {
   console.log(`Server is running on port ${app_port}.`);
-  log.info(`Server is running on port ${app_port}!`);
 });
 
