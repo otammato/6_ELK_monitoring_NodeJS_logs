@@ -33,6 +33,23 @@ const log = bunyan.createLogger({
   level: 'debug',
 });
 
+console.log = (...args) => {
+  log.info(args.join(' '));
+};
+
+console.error = (...args) => {
+  log.error(args.join(' '));
+};
+
+console.warn = (...args) => {
+  log.warn(args.join(' '));
+};
+
+console.debug = (...args) => {
+  log.debug(args.join(' '));
+};
+
+
 const logRequests = (req, res, next) => {
   log.info(`${req.method} ${req.url}`);
   next();
