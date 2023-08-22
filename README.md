@@ -150,13 +150,13 @@ services:
 
 1. `docker-compose up`
 
-### 3. Retrieve the ip address of the dockerized logstash container
+### 4. Retrieve the ip address of the dockerized logstash container
 
 3. `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
 
 
-(the page is currently under development)
+<br><br>
 
 <img width="1000" alt="Screenshot 2023-08-21 at 22 23 27" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/d8bea94a-3de3-4614-a172-0fea507a1994">
 <img width="1000" alt="Screenshot 2023-08-21 at 22 24 01" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/efaa83da-1589-4737-9b2c-f5652b5c7e6d">
