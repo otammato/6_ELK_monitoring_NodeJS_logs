@@ -111,8 +111,8 @@ The architecture entails several items:
 
 ## Steps:
 1. `sudo apt update`
-2. sudo apt  install docker-compose
-3. docker-compose up
-4. sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash
-5. sudo apt install nodejs
-6. sudo apt install npm
+2. `sudo apt  install docker-compose`
+3. `docker-compose up`
+4. `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
+5. `sudo apt install nodejs`
+6. `sudo apt install npm`
