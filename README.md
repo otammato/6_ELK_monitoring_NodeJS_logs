@@ -130,8 +130,10 @@ The architecture entails the following:
 <img width="1000" alt="Screenshot 2023-08-21 at 22 26 04" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/465dd78a-3c17-4fd4-bcc6-2cb5347375e5">
 
 <img width="1000" alt="Screenshot 2023-08-21 at 22 25 37" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/a50b9bac-aba0-4492-ba0b-d677bcd98826">
-<img width="1000" alt="Screenshot 2023-08-21 at 22 25 26" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/95e1e230-56c7-40fa-9417-b45559421d51">
+
 <img width="1000" alt="Screenshot 2023-08-21 at 22 25 07" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/067dccea-11cd-49f7-b61c-efdc6c588e4c">
+<img width="1000" alt="Screenshot 2023-08-21 at 22 25 26" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/95e1e230-56c7-40fa-9417-b45559421d51">
+
 
 <img width="1000" alt="Screenshot 2023-08-21 at 22 24 24" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/56b8f390-011f-469c-b756-69ee23829557">
 
