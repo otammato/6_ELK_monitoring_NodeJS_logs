@@ -52,26 +52,40 @@ app.use(express.static('public'));
 app.use(favicon(__dirname + "/public/img/favicon.ico"));
 
 // APP endpoints
-// list all the suppliers
 app.get("/", (req, res) => {
+  log.info("Routes: GET /: Home route which renders a homepage.");
   res.render("home", {});
-  // No need to log here since the middleware already logs the request
 });
 
-app.get("/suppliers/", supplier.findAll);
+app.get("/suppliers/", (req, res) => {
+  log.info("Routes: GET /suppliers/: Lists all suppliers.");
+  supplier.findAll(req, res);
+});
 
 app.get("/supplier-add", (req, res) => {
+  log.info("Routes: GET /supplier-add: Displays the form to add a new supplier.");
   res.render("supplier-add", {});
-  // No need to log here since the middleware already logs the request
 });
 
-app.post("/supplier-add", supplier.create);
+app.post("/supplier-add", (req, res) => {
+  log.info("Routes: POST /supplier-add: Endpoint to add a new supplier.");
+  supplier.create(req, res);
+});
 
-app.get("/supplier-update/:id", supplier.findOne);
+app.get("/supplier-update/:id", (req, res) => {
+  log.info(`Routes: GET /supplier-update/${req.params.id}: Displays the form to update a supplier with a specific ID.`);
+  supplier.findOne(req, res);
+});
 
-app.post("/supplier-update", supplier.update);
+app.post("/supplier-update", (req, res) => {
+  log.info("Routes: POST /supplier-update: Endpoint to update the supplier details.");
+  supplier.update(req, res);
+});
 
-app.post("/supplier-remove/:id", supplier.remove);
+app.post("/supplier-remove/:id", (req, res) => {
+  log.info(`Routes: POST /supplier-remove/${req.params.id}: Endpoint to remove a supplier with a specific ID.`);
+  supplier.remove(req, res);
+});
 
 // handle 404
 app.use(function (req, res, next) {
