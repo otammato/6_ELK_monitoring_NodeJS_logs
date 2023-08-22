@@ -55,6 +55,10 @@ from `app/config/config.js` will be used
 
 <br>
 
+For logging I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
+
+<br>
+
 ## Technologies used
 
 - ELK stack (Elastic Search + Logstash + Kibana)
