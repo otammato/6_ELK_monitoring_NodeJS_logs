@@ -120,6 +120,32 @@ The architecture entails the following:
 
 ### 3. Launch the Docker-compose file (located in the same directory)  
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
+version: '3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.14.0
+    container_name: logstash
+    volumes:
+      - ./nodeapp.conf:/usr/share/logstash/pipeline/nodeapp.conf
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.14.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
+
 </details>
 
 1. `docker-compose up`
