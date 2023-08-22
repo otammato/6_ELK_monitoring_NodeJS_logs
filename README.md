@@ -108,6 +108,7 @@ The architecture entails the following:
 <img width="1000" alt="Screenshot 2023-08-21 at 22 31 08" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/3a90234d-7a5f-4533-bd5c-a072047f0528">
 
 
+<br><br>
 
 ## Steps:
 ## 1. Install Docker-compose
