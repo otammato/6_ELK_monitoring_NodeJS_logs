@@ -110,15 +110,15 @@ The architecture entails the following:
 
 
 ## Steps:
-### 1. Install Docker-compose
+## 1. Install Docker-compose
 - `sudo apt update`
 - `sudo apt  install docker-compose`
 
-### 2. Install nodejs and npm
+## 2. Install nodejs and npm
 - `sudo apt install nodejs`
 - `sudo apt install npm`
 
-### 3. Launch the Docker-compose file (located in the same directory)  
+## 3. Launch the Docker-compose file (located in the same directory)  
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
 version: '3'
 services:
@@ -150,11 +150,11 @@ services:
 
 - `docker-compose up`
 
-### 4. Retrieve the ip address of the dockerized logstash container
+## 4. Retrieve the ip address of the dockerized logstash container
 
 - `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
-### 5. Update the NodeJS files to utilize the 'bunyan' library for logging
+## 5. Update the NodeJS files to utilize the 'bunyan' library for logging
 
 Detailed description of the implemented logging solution based on Bunyan and Logstash:
 
