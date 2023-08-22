@@ -111,12 +111,12 @@ The architecture entails the following:
 
 ## Steps:
 ### 1. Install Docker-compose
-1. `sudo apt update`
-2. `sudo apt  install docker-compose`
+- `sudo apt update`
+- `sudo apt  install docker-compose`
 
 ### 2. Install nodejs and npm
-1. `sudo apt install nodejs`
-2. `sudo apt install npm`
+- `sudo apt install nodejs`
+- `sudo apt install npm`
 
 ### 3. Launch the Docker-compose file (located in the same directory)  
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
@@ -148,11 +148,11 @@ services:
 
 </details>
 
-1. `docker-compose up`
+- `docker-compose up`
 
 ### 4. Retrieve the ip address of the dockerized logstash container
 
-3. `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
+- `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
 
 
