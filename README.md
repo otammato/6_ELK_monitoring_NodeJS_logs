@@ -108,7 +108,6 @@ The architecture entails the following:
 <img width="1000" alt="Screenshot 2023-08-21 at 22 31 08" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/3a90234d-7a5f-4533-bd5c-a072047f0528">
 
 
-1.  
 
 ## Steps:
 ### 1. Install Docker-compose
@@ -119,9 +118,15 @@ The architecture entails the following:
 1. `sudo apt install nodejs`
 2. `sudo apt install npm`
 
-### 2. Launch the Docker-compose file (located in the same directory)  
+### 3. Launch the Docker-compose file (located in the same directory)  
+<details markdown=1><summary markdown="span">docker-compose.yml</summary>
+</details>
+
 1. `docker-compose up`
-2. `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
+
+### 3. Retrieve the ip address of the dockerized logstash container
+
+3. `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
 
 
