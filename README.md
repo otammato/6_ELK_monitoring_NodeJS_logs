@@ -56,7 +56,7 @@ from `app/config/config.js` will be used
 <br>
 For logging I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
-<br>
+<br><br>
 
 Further processing and vizualisation of the emitted logs implemented on the ELK stack (Elastic search, Logstash, Kibana). It is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term.
 
