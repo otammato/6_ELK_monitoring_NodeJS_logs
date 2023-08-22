@@ -110,7 +110,7 @@ The architecture entails several items:
 1.  (the page is currently under development)
 
 ## Steps:
-1. sudo apt update
+1. `sudo apt update`
 2. sudo apt  install docker-compose
 3. docker-compose up
 4. sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash
