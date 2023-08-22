@@ -62,7 +62,7 @@ from `app/config/config.js` will be used
 - MySQL
 - Docker
 - Docker-compose
-- NodeJS
+- NodeJS, npm
 - bunyan (a logging library for Node.js that provides structured and extensible logging capabilities)
 - AWS Cloud
 - AWS EC2 (Linux Ubuntu 22.04)
@@ -71,13 +71,11 @@ from `app/config/config.js` will be used
 
 ## Prerequisites
 
-To launch this Jenkins pipeline, you need the following prerequisites:
+To test this solution, you need the following prerequisites:
 
-- Linux workstation with Node.js, Git and Docker installed (I'm using Ubuntu 22.04)
-- Valid GitHub account
-- Valid DockerHub account (create a repository called "jenkins_nodejs_app_demo")
-- Jenkins server with a public IP
-- Kubernetes cluster (I'm using AWS EKS)
+- Linux workstation with Node.js, npm, Git, and Docker installed (I'm using Ubuntu 22.04)
+- A sample Node.JS app
+
 
 <br>
 
