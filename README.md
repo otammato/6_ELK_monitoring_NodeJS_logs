@@ -154,7 +154,7 @@ services:
 
 - `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
-
+### 5. Update the NodeJS files to utilize the 'bunyan' library for logging
 
 <br><br>
 
