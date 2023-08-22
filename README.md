@@ -54,10 +54,60 @@ from `app/config/config.js` will be used
 </details>
 
 <br>
-
 For logging I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
 <br>
+
+Further processing and vizualisation of the emitted logs implemented on the ELK stack (Elastic search, Logstash, Kibana). It is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term.
+
+<details markdown=1><summary markdown="span">Details of the ELK stack</summary>
+The ELK stack, which stands for Elasticsearch, Logstash, and Kibana, is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term. Here's a detailed description of each component:
+
+### 1. **Elasticsearch**
+
+**Overview**: 
+Elasticsearch is a distributed, RESTful search and analytics engine. It's built on top of Lucene and provides a means of storing, searching, and analyzing large volumes of data quickly and in near real-time.
+
+**Key Features**:
+- **Distributed**: Automatically splits and distributes data across multiple nodes. Supports clustering, sharding, and replication.
+- **Full-Text Search**: Built on top of the Lucene library, it provides powerful full-text search capabilities.
+- **RESTful API**: Interact with the data stored in Elasticsearch using RESTful API endpoints, returning data in JSON format.
+- **Schema-Free**: JSON documents can be stored without a predefined schema, but you can define custom mappings.
+- **Scalability**: Can scale out by adding more nodes to the cluster. Handles large amounts of data efficiently.
+
+### 2. **Logstash**
+
+**Overview**: 
+Logstash is a server-side data processing pipeline that ingests, transforms, and then sends data to the specified destination. It can take in data from various sources, process it, and send it to various outputs.
+
+**Key Features**:
+- **Inputs**: Supports various input plugins to gather data, including logs, metrics, and other telemetry.
+- **Filters**: Data can be transformed and enriched using a variety of filter plugins. Common operations include parsing log entries, adding geographical data from IP addresses, and changing field names.
+- **Outputs**: Supports various output plugins to send data to destinations like Elasticsearch, cloud services, or even local files.
+- **Extensibility**: Has a rich collection of plugins and can be extended with custom plugins as well.
+
+### 3. **Kibana**
+
+**Overview**: 
+Kibana is the visualization layer of the ELK stack. It provides search and data visualization capabilities for data indexed in Elasticsearch.
+
+**Key Features**:
+- **Dashboards**: Create, share, and embed interactive data visualizations and dashboards.
+- **Data Exploration**: Offers a user-friendly interface to search and view data stored in Elasticsearch.
+- **Advanced Analytics**: Supports advanced time series analysis, machine learning features, graph exploration, and more.
+- **Management & Monitoring**: Kibana also comes with tools for managing and monitoring the Elasticsearch cluster, as well as advanced features like alerting.
+- **Extensibility**: Can be customized with plugins and offers integrations with other Elastic tools.
+
+### **How They Work Together**:
+
+- **Data Collection & Processing**: Logstash collects data from various sources. It then processes, transforms, and enriches the data based on user-defined rules.
+  
+- **Data Storage**: Once processed, Logstash sends the data to Elasticsearch for storage. Elasticsearch indexes the data, making it quickly searchable.
+  
+- **Visualization & Analysis**: Kibana interfaces with Elasticsearch to search, view, and visualize the data. Users can create custom dashboards in Kibana to monitor and analyze their data.
+
+Together, the ELK stack provides an end-to-end solution for gathering, processing, storing, and visualizing data, making it a popular choice for log and event data management in particular.
+</details>
 
 ## Technologies used
 
