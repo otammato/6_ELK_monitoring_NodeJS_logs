@@ -156,6 +156,68 @@ services:
 
 ### 5. Update the NodeJS files to utilize the 'bunyan' library for logging
 
+Detailed description of the implemented logging solution based on Bunyan and Logstash:
+
+### **Logging Solution Overview**
+
+We've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
+
+### **1. Logger Configuration**
+
+#### **Bunyan Logger Setup**
+
+In `config.js`, we've set up the main logger with multiple streams:
+
+- **File Stream**: This saves logs directly to a file (`logs.log`).
+  
+- **Standard Output Stream**: This stream is directed to the console, so any log emitted by Bunyan also appears on your console.
+  
+- **Logstash Stream**: This sends logs to Logstash, which can further process the logs and pass them to Elasticsearch, visualize them on Kibana, or forward to any other destination.
+
+This allows for flexibility in logging. For example, in a production environment, you might want to log critical errors to a separate error file, send general logs to Logstash, and omit console logs.
+
+#### **Child Loggers**
+
+We also created child loggers to differentiate the source of the logs. For instance, in `index.js`, we create a child logger with a source attribute set to "app", indicating these logs come from the app.
+
+### **2. Log Forwarding**
+
+#### **Logstash Configuration (not shown in the provided code)**
+
+After Bunyan sends logs to Logstash, Logstash can be configured with input, filter, and output plugins to determine how logs should be ingested, processed, and forwarded.
+
+- **Input**: This will be set up to receive logs on the specified port from Bunyan.
+
+- **Filter**: Allows you to transform logs, like parsing out specific fields, dropping unneeded information, or enhancing logs with extra data.
+
+- **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
+
+### **3. Log Overrides and Middleware**
+
+#### **Overriding Console Methods**
+
+To ensure that every piece of log data (whether someone uses `console.log` or the Bunyan logger directly) gets captured and structured appropriately, we overrode the default `console.log`, `console.warn`, `console.debug`, and `console.error` methods. This ensures a consistent logging mechanism throughout the app.
+
+#### **Middleware for HTTP Request Logging**
+
+We implemented an Express middleware function, `logRequests`, which logs every incoming HTTP request, capturing the method (GET, POST, etc.) and the URL.
+
+### **4. Structured Logging**
+
+One of the primary benefits of using Bunyan is the ability to produce structured logs. This means logs aren't just simple text strings but structured JSON objects that can contain various fields. This structured data makes it much easier to filter, search, and analyze logs, especially in large systems.
+
+For example, when you see the log:
+
+```json
+{"name":"combined-log","hostname":"ip-172-31-84-253","pid":4232,"level":30,"msg":"Server is running on port 3000.","time":"2023-08-22T18:48:53.495Z","v":0}
+```
+
+It's not just a string message but contains valuable fields: the name of the logger, hostname, process ID, log level, the actual message, timestamp, and even the Bunyan version.
+
+### **Summary**
+
+This solution provides a robust logging system that captures logs from various parts of the application, structures them, and then routes them to appropriate destinations. It's built to be scalable, easy to analyze, and flexible in terms of where logs can be sent and how they can be processed.
+
 <br><br>
 
 <img width="1000" alt="Screenshot 2023-08-21 at 22 23 27" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/d8bea94a-3de3-4614-a172-0fea507a1994">
