@@ -171,6 +171,8 @@ Kibana is the visualization layer of the ELK stack. It provides search and data 
 Together, the ELK stack provides an end-to-end solution for gathering, processing, storing, and visualizing data, making it a popular choice for log and event data management in particular.
 </details>
 
+<br><br>
+
 ## Technologies used
 
 - ELK stack (Elastic Search + Logstash + Kibana)
