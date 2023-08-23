@@ -1,7 +1,7 @@
 (the page is under development)
 
 
-# ELK (Elastic search, Logstash, Kibana) for monotoring of logs of a Node.js Application
+# ELK (Elastic search, Logstash, Kibana) for monotoring logs of a Node.js Application
 
 
 In this demo we create a logs' monitoring solution based on ELK stack for a sample NodeJS app used in a series of previous projects.
