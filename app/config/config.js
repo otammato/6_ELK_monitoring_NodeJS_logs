@@ -3,7 +3,7 @@ const bunyan = require('bunyan');
 
 // Importing the bunyan-logstash-tcp library to send logs to Logstash via TCP.
 const logstashStream = require('bunyan-logstash-tcp').createStream({
-  host: '172.20.0.3',   // Specify the hostname or IP of the Logstash server.
+  host: 'localhost',   // Specify the hostname or IP of the Logstash server.
   port: 5000,           // Specify the port where Logstash is listening.
 });
 
