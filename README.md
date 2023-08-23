@@ -115,8 +115,6 @@ The Logging Solution:
 The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
 </details>
 
-<br>
-
 Further processing and vizualisation of the emitted logs implemented on the ELK stack (Elastic search, Logstash, Kibana). It is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term.
 
 
@@ -220,8 +218,7 @@ The architecture entails the following:
 
 ## Final result
 <img width="1000" alt="Screenshot 2023-08-21 at 22 32 05" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/a7b6560f-a7bd-47a2-8133-1eca1d896830">
-<img width="1000" alt="Screenshot 2023-08-21 at 22 31 08" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/3a90234d-7a5f-4533-bd5c-a072047f0528">
-
+<img width="1000" alt="Screenshot 2023-08-23 at 11 34 11" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/c6b07918-2887-4f00-987b-5d2184ebab04">
 
 <br><br>
 
