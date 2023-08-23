@@ -4,7 +4,7 @@
 # ELK (Elastic search, Logstash, Kibana) for monotoring logs of a Node.js Application
 
 
-In this demo we create a logs' monitoring solution based on ELK stack for a sample NodeJS app used in a series of previous projects.
+In this demo I am setting up a logs' monitoring solution based on ELK stack for a sample NodeJS app used in a series of previous projects.
 
 The Node.js application is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results.
 
