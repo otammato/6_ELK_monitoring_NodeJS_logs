@@ -41,13 +41,14 @@ The Main Solution:
    - The site's tiny browser tab icon is fetched using `serve-favicon`.
 
 #### **Routes (Webpage Endpoints)**:
-   - **Home**: The landing page.
+   - **Home**: `GET /`: Serves the home page.
    - **Supplier Operations**: 
-     - View all (`GET /suppliers/`).
-     - Add a new one (View form: `GET /supplier-add`, Submit form: `POST /supplier-add`).
-     - Update an existing one (View form: `GET /supplier-update/:id`, Submit updates: `POST /supplier-update`).
-     - Delete based on an ID (`POST /supplier-remove/:id`).
-   - **Error Pages**: If someone gets lost (tries accessing a non-existing page), they're shown an error message (`404`).
+     - `GET /suppliers/`: Fetches and displays all suppliers.
+     - `GET /supplier-add`: Serves a page to add a new supplier.
+     - `POST /supplier-add`: Receives data to add a new supplier.
+     - `GET /supplier-update/:id`: Serves a page to update details of a supplier using its ID.
+     - `POST /supplier-update`: Receives updated data of a supplier.
+     - `POST /supplier-remove/:id`: Removes a supplier using its ID.
 
 #### **Starting Up**:
    - The server comes to life, starts listening for visits, and announces its awakening with a log message.
@@ -112,7 +113,6 @@ The Logging Solution:
 #### **Server Activities**:
    - Be it starting up, or any supplier-related activity like viewing, adding, or deleting, everything gets its own log entry.
 
-The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
 </details>
 
 Further processing and vizualisation of the emitted logs implemented on the ELK stack (Elastic search, Logstash, Kibana). It is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term.
