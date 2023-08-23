@@ -278,7 +278,7 @@ Detailed description of the implemented logging solution based on Bunyan and Log
 
 I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
-### **1. Logger Configuration**
+### **Logger Configuration**
 
 #### **Bunyan Logger Setup**
 
@@ -296,7 +296,7 @@ This allows for flexibility in logging. For example, in a production environment
 
 We also created child loggers to differentiate the source of the logs. For instance, in `index.js`, we create a child logger with a source attribute set to "app", indicating these logs come from the app.
 
-### **2. Log Forwarding**
+### **Log Forwarding**
 
 #### **Logstash Configuration (not shown in the provided code)**
 
@@ -308,7 +308,7 @@ After Bunyan sends logs to Logstash, Logstash can be configured with input, filt
 
 - **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
 
-### **3. Log Overrides and Middleware**
+### **Log Overrides and Middleware**
 
 #### **Overriding Console Methods**
 
@@ -318,7 +318,7 @@ To ensure that every piece of log data (whether someone uses `console.log` or th
 
 We implemented an Express middleware function, `logRequests`, which logs every incoming HTTP request, capturing the method (GET, POST, etc.) and the URL.
 
-### **4. Structured Logging**
+### **Structured Logging**
 
 One of the primary benefits of using Bunyan is the ability to produce structured logs. This means logs aren't just simple text strings but structured JSON objects that can contain various fields. This structured data makes it much easier to filter, search, and analyze logs, especially in large systems.
 
