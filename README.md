@@ -17,8 +17,6 @@ This Node.js app sets up a web-server and is based on two microservices: the fro
 ## Summary
 The app sets up a web server for a supplier management system. It allows viewing, adding, updating, and deleting suppliers. 
 
-Certainly! Let's focus on breaking down the script into its primary functionalities while keeping the description format close to your example:
-
 The Main Solution:
 
 #### **Dependencies and Modules**:
@@ -97,9 +95,32 @@ from `app/config/config.js` will be used
 
 For logging I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
+<details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app. Logging solution</summary>
+
+The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
+
+The Logging Solution:
+
+#### **Setting up and Distinguishing Logs**:
+   - A special logger (`appLogger`) ensures that all the server's actions are noted down separately from other potential system logs.
+
+#### **Capturing All Messages**:
+   - The common ways developers use to write logs (like just printing messages) are tweaked. Now, instead of only printing, they make sure messages are properly recorded using `appLogger`.
+
+#### **Monitoring Requests**:
+   - Every time someone interacts with the server, `logRequests` notes down what they did and which part of the server they accessed.
+
+#### **Server Activities**:
+   - Be it starting up, or any supplier-related activity like viewing, adding, or deleting, everything gets its own log entry.
+
+The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
+</details>
+
 <br>
 
 Further processing and vizualisation of the emitted logs implemented on the ELK stack (Elastic search, Logstash, Kibana). It is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term.
+
+
 
 <details markdown=1><summary markdown="span">Details of the ELK stack</summary>
 The ELK stack, which stands for Elasticsearch, Logstash, and Kibana, is a popular set of tools for searching, analyzing, and visualizing data in real-time. Over the years, the stack has grown to include Beats and is sometimes referred to as the Elastic Stack, but ELK remains a popular term. Here's a detailed description of each component:
