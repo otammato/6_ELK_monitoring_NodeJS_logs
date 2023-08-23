@@ -99,10 +99,13 @@ For logging I've chosen Bunyan, a structured logging module for Node.js, to outp
 
 The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
 
-The Logging Solution:
+### The Logging Solution:
 
 #### **Setting up and Distinguishing Logs**:
-   - A special logger (`appLogger`) ensures that all the server's actions are noted down separately from other potential system logs.
+   - A special logger (`appLogger`) ensures that all the server's actions are noted down separately from other potential system logs. In my case, I want to sepatrate `app` logs from `config` logs.
+     - Configuration-related logs will be marked with source: 'config'.
+     - All other application-related logs will be marked with source: 'app'.
+   This way, by looking at the log source, you can easily identify where the log came from.
 
 #### **Capturing All Messages**:
    - The common ways developers use to write logs (like just printing messages) are tweaked. Now, instead of only printing, they make sure messages are properly recorded using `appLogger`.
