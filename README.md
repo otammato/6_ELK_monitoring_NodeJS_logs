@@ -10,9 +10,10 @@ The sample NodeJS app is the same app used in the series of previous projects.
 
 This Node.js app sets up a web-server and is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
 
- # <details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app</summary>
+<details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app. Main solution</summary>
 
 ## Summary
+
 The app sets up a web server for a supplier management system. It allows viewing, adding, updating, and deleting suppliers. 
 
 The Main Solution:
@@ -94,6 +95,8 @@ from `app/config/config.js` will be used
 For logging I've chosen Bunyan, a structured logging module for Node.js, to output log records as JSON. This is particularly useful as it makes log parsing in subsequent stages, like Logstash, more straightforward. With Bunyan's structured logs, it becomes easy to filter, search, and analyze logs.
 
 <details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app. Logging solution</summary>
+
+## Summary
 
 The solution maintains a detailed diary (logs) of everything that happens, ensuring transparency and traceability.
 
