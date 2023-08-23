@@ -4,7 +4,7 @@ const cors = require("cors");
 const supplier = require("./app/controller/supplier.controller");
 const mustacheExpress = require("mustache-express");
 const favicon = require('serve-favicon');
-const { config, mainLogger } = require('./config.js');
+const { config, mainLogger } = require('./app/config/config.js');
 
 const app = express();
 const app_port = process.env.APP_PORT || 3000;
