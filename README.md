@@ -8,14 +8,52 @@ In this demo I am setting up a logs' monitoring solution for a sample NodeJS app
 
 The sample NodeJS app is the same app used in the series of previous projects.
 
-This Node.js app is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
+This Node.js app sets up a web-server and is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
 
 <details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app</summary>
 
 # Coffee suppliers sample app
 
 ## Summary
-This is a simple CRUD app built with Express.
+The app sets up a web server for a supplier management system. It allows viewing, adding, updating, and deleting suppliers. 
+
+Certainly! Let's focus on breaking down the script into its primary functionalities while keeping the description format close to your example:
+
+### 1. The Main Solution:
+
+#### **Dependencies and Modules**:
+   - **express**: The framework that allows us to set up and run a web server.
+   - **body-parser**: A tool that lets the server read and understand data sent in requests.
+   - **cors**: Ensures the server can communicate with different web addresses or domains.
+   - **mustache-express**: A template engine, letting the server display dynamic web pages using the Mustache format.
+   - **serve-favicon**: Provides the small icon seen on browser tabs for the website.
+   - **Custom Modules**: 
+     - `supplier.controller`: Handles the logic for managing suppliers like fetching, adding, or updating their details.
+     - `config.js`: Keeps the server's settings and the logging setup.
+
+#### **Configuration**:
+   - The server starts on a port taken from a setting (like an environment variable) or uses `3000` as a default.
+   - `appLogger` is a specific tool used for logging activities related to the server's operation.
+
+#### **Middleware**:
+   - The server has a built-in monitor (`logRequests`) that notes down every incoming request's details.
+   - It's equipped to understand data in JSON format or when it's URL-encoded.
+   - It can chat with web pages hosted elsewhere, thanks to CORS.
+   - Mustache is the chosen format for web pages, with templates stored in a folder named `views`.
+   - There's a public storage (`public`) for things like images or stylesheets, accessible by anyone visiting the site.
+   - The site's tiny browser tab icon is fetched using `serve-favicon`.
+
+#### **Routes (Webpage Endpoints)**:
+   - **Home**: The landing page.
+   - **Supplier Operations**: 
+     - View all (`GET /suppliers/`).
+     - Add a new one (View form: `GET /supplier-add`, Submit form: `POST /supplier-add`).
+     - Update an existing one (View form: `GET /supplier-update/:id`, Submit updates: `POST /supplier-update`).
+     - Delete based on an ID (`POST /supplier-remove/:id`).
+   - **Error Pages**: If someone gets lost (tries accessing a non-existing page), they're shown an error message (`404`).
+
+#### **Starting Up**:
+   - The server comes to life, starts listening for visits, and announces its awakening with a log message.
 
 ## Running locally
 
