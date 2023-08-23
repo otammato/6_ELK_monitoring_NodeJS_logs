@@ -19,7 +19,7 @@ The app sets up a web server for a supplier management system. It allows viewing
 
 Certainly! Let's focus on breaking down the script into its primary functionalities while keeping the description format close to your example:
 
-### 1. The Main Solution:
+The Main Solution:
 
 #### **Dependencies and Modules**:
    - **express**: The framework that allows us to set up and run a web server.
