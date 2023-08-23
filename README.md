@@ -10,7 +10,7 @@ The sample NodeJS app is the same app used in the series of previous projects.
 
 This Node.js app sets up a web-server and is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
 
-<details markdown=1><summary markdown="span"># Details of the Coffee suppliers sample app</summary>
+<details markdown=1><summary markdown="span"> # Details of the Coffee suppliers sample app</summary>
 
 ## Summary
 The app sets up a web server for a supplier management system. It allows viewing, adding, updating, and deleting suppliers. 
