@@ -192,7 +192,7 @@ Together, the ELK stack provides an end-to-end solution for gathering, processin
 To test this solution, you need the following prerequisites:
 
 - Linux workstation with Node.js, npm, Git, and Docker installed (I'm using Ubuntu 22.04)
-- A sample Node.JS app
+- A sample Node.JS app available here: 
 
 
 <br>
