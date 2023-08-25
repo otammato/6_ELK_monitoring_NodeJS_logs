@@ -495,7 +495,7 @@ After Bunyan sends logs to Logstash, Logstash can be configured with input, filt
 
 - **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
 
-<details markdown=1><summary markdown="span">docker-compose.yml</summary>
+<details markdown=1><summary markdown="span">nodeapp.conf</summary>
 
 ```
 input {
