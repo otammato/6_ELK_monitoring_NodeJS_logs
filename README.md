@@ -8,7 +8,7 @@ In this demo I am setting up a logs' monitoring solution for a sample NodeJS app
 
 I am using the sample NodeJS utilised in the series of previous projects.
 
-This Node.js app sets up a web-server and and based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
+This Node.js app sets up a web-server and and is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
 
 <details markdown=1><summary markdown="span">Details of the Coffee suppliers sample app. Main solution</summary>
 
