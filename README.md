@@ -237,7 +237,9 @@ The architecture entails the following:
 - `sudo apt install npm`
 
 ## 3. Launch the Docker-compose file (located in the same directory)  
+
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
+   
 version: '3'
 services:
   elasticsearch:
