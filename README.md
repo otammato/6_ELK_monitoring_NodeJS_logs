@@ -456,7 +456,7 @@ module.exports = {
 ```
 
 
-</deteils>
+</details>
 
 Detailed description of the implemented logging solution based on Bunyan and Logstash:
 
