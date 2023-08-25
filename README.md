@@ -455,8 +455,14 @@ module.exports = {
 
 ```
 
+</details>
+
+
+<details markdown=1><summary markdown="span">app/config/config.js</summary>
 
 </details>
+
+
 
 Detailed description of the implemented logging solution based on Bunyan and Logstash:
 
