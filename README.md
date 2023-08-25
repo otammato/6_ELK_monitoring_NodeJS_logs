@@ -495,6 +495,24 @@ After Bunyan sends logs to Logstash, Logstash can be configured with input, filt
 
 - **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
 
+<details markdown=1><summary markdown="span">docker-compose.yml</summary>
+
+```
+input {
+  tcp {
+    port => 5000  # Choose any available port, we'll use this in Node.js app to send logs.
+    codec => json_lines  # Assumes your logs are in JSON format.
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["elasticsearch:9200"]  # Replace 'elasticsearch' with the hostname or IP of your Elasticsearch instance.
+  }
+}
+```
+</details>
+
 ### **Log Overrides and Middleware**
 
 #### **Overriding Console Methods**
