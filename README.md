@@ -485,7 +485,7 @@ We also created child loggers to differentiate the source of the logs. For insta
 
 ### **Log Forwarding**
 
-#### **Logstash Configuration (not shown in the provided code)**
+#### **Logstash Configuration (set up in nodeapp.conf file)**
 
 After Bunyan sends logs to Logstash, Logstash can be configured with input, filter, and output plugins to determine how logs should be ingested, processed, and forwarded.
 
