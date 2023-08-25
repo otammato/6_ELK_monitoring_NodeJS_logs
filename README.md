@@ -391,6 +391,11 @@ app.listen(app_port, () => {
 ```
 </details>
 
+<details markdown=1><summary markdown="span">app/config.js</summary>
+
+
+</deteils>
+
 Detailed description of the implemented logging solution based on Bunyan and Logstash:
 
 ### **Logging Solution Overview**
