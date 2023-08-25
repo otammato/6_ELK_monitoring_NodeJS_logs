@@ -199,7 +199,7 @@ To test this solution, you need the following prerequisites:
 
 ## Architecture
 
-<img width="1000" alt="Screenshot 2023-08-06 at 22 26 34" src="https://github.com/otammato/ELK2/assets/104728608/df9b12dd-3c35-4259-9e52-aad3b621c89c">
+<<img width="1190" alt="Screenshot 2023-08-25 at 20 57 39" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/74b92c36-3a62-4a3c-888b-e8f1dcf397cf">
 
 <br><br>
 
