@@ -240,6 +240,7 @@ The architecture entails the following:
 
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
    
+```
 version: '3'
 services:
   elasticsearch:
@@ -265,6 +266,7 @@ services:
       - "5601:5601"
     environment:
       ELASTICSEARCH_HOSTS: "http://elasticsearch:9200"
+```
 
 </details>
 
