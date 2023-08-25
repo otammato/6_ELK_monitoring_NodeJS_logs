@@ -278,6 +278,11 @@ services:
 
 ## 5. Update the NodeJS files to utilize the 'bunyan' library for logging
 
+<details markdown=1><summary markdown="span">index.js</summary>
+```
+```
+</details>
+
 Detailed description of the implemented logging solution based on Bunyan and Logstash:
 
 ### **Logging Solution Overview**
