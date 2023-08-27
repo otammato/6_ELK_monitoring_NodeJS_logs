@@ -238,6 +238,7 @@ The architecture entails the following:
 
 ## 3. Create the nodeapp.conf file in the working directory:
 
+
 <details markdown=1><summary markdown="span">nodeapp.conf</summary>
 
 ```
@@ -255,7 +256,7 @@ output {
 }
 ```
 
-</deteils>
+</details>
 
 ## 3. Create and launch the Docker-compose file (located in the same directory)  
 
