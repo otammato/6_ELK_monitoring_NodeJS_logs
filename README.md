@@ -255,6 +255,8 @@ output {
 }
 ```
 
+</deteils>
+
 ## 3. Create and launch the Docker-compose file (located in the same directory)  
 
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
