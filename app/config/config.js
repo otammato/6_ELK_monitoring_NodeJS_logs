@@ -37,7 +37,7 @@ let config = {
   APP_DB_HOST: "localhost",
   APP_DB_USER: "root",
   APP_DB_PORT: "3306",
-  APP_DB_PASSWORD: "12345678",
+  APP_DB_PASSWORD: "12345678", // For security, avoid hard-coding the password, use environment variables or some secret-management tool instead
   APP_DB_NAME: "COFFEE"
 }
 
