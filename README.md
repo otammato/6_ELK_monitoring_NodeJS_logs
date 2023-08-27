@@ -322,7 +322,7 @@ let config = {
   APP_DB_HOST: "localhost",
   APP_DB_USER: "root",
   APP_DB_PORT: "3306",
-  APP_DB_PASSWORD: "12345678",
+  APP_DB_PASSWORD: "12345678", // For security, avoid hard-coding the password, use environment variables or some secret-management tool instead
   APP_DB_NAME: "COFFEE"
 }
 
@@ -493,6 +493,8 @@ After Bunyan sends logs to Logstash, Logstash can be configured with input, filt
 - **Filter**: Allows you to transform logs, like parsing out specific fields, dropping unneeded information, or enhancing logs with extra data.
 
 - **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
+
+### Create the nodeapp.conf file in the working directory:
 
 <details markdown=1><summary markdown="span">nodeapp.conf</summary>
 
