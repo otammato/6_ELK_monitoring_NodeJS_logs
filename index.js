@@ -91,7 +91,7 @@ app.post("/supplier-remove/:id", (req, res) => {
 
 // Handle 404 errors and log them
 app.use(function(req, res, next) {
-    appLogger.debug("error 404 event");
+    appLogger.debug("error 404 event captured");
     res.status(404).render("404", {});
 });
 
