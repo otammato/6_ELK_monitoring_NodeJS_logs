@@ -278,7 +278,7 @@ services:
 
 ## 5. Update the NodeJS files to utilize the 'bunyan' library for logging
 
-config.js:
+#### config.js:
 
 <details markdown=1><summary markdown="span">app/config/config.js</summary>
 
@@ -346,7 +346,7 @@ module.exports = {
 
 </details>
 
-index.js:
+#### index.js:
 
 <details markdown=1><summary markdown="span">index.js</summary>
    
