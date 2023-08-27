@@ -55,37 +55,37 @@ app.use(favicon(__dirname + "/public/img/favicon.ico"));
 
 // APP endpoints
 app.get("/", (req, res) => {
-  appLogger.info("Route call captured: GET /: Home route which renders a homepage.");
+  appLogger.info("Endpoint call captured: GET /: Home route which renders a homepage.");
   res.render("home", {});
 });
 
 app.get("/suppliers/", (req, res) => {
-  appLogger.info("Route call captured: GET /suppliers/: Lists all suppliers.");
+  appLogger.info("Endpoint call captured: GET /suppliers/: Lists all suppliers.");
   supplier.findAll(req, res);
 });
 
 app.get("/supplier-add", (req, res) => {
-  appLogger.info("Route call captured: GET /supplier-add: Displays the form to add a new supplier.");
+  appLogger.info("Endpoint call captured: GET /supplier-add: Displays the form to add a new supplier.");
   res.render("supplier-add", {});
 });
 
 app.post("/supplier-add", (req, res) => {
-  appLogger.info("Route call captured: POST /supplier-add: Endpoint to add a new supplier.");
+  appLogger.info("Endpoint call captured: POST /supplier-add: Endpoint to add a new supplier.");
   supplier.create(req, res);
 });
 
 app.get("/supplier-update/:id", (req, res) => {
-  appLogger.info(`Route call captured: GET /supplier-update/${req.params.id}: Displays the form to update a supplier with a specific ID.`);
+  appLogger.info(`Endpoint call captured:: GET /supplier-update/${req.params.id}: Displays the form to update a supplier with a specific ID.`);
   supplier.findOne(req, res);
 });
 
 app.post("/supplier-update", (req, res) => {
-  appLogger.info("Route call captured: POST /supplier-update: Endpoint to update the supplier details.");
+  appLogger.info("Endpoint call captured: POST /supplier-update: Endpoint to update the supplier details.");
   supplier.update(req, res);
 });
 
 app.post("/supplier-remove/:id", (req, res) => {
-  appLogger.info(`Route call captured: POST /supplier-remove/${req.params.id}: Endpoint to remove a supplier with a specific ID.`);
+  appLogger.info(`Endpoint call captured: POST /supplier-remove/${req.params.id}: Endpoint to remove a supplier with a specific ID.`);
   supplier.remove(req, res);
 });
 
