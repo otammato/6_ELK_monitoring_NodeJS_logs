@@ -6,7 +6,7 @@
 
 In this demo I am setting up a logs' monitoring solution for a sample NodeJS app using Bunyan framework and ELK stack. 
 
-I am using the same sample NodeJS utilised in the series of previous projects.
+I am using the same sample NodeJS app utilised in the series of previous projects.
 
 This Node.js app sets up a web-server and and is based on two microservices: the frontend interface performing CRUD operations on the backend (MySQL database) and rendering the results on a web page.
 
