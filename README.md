@@ -236,7 +236,26 @@ The architecture entails the following:
 - `sudo apt install nodejs`
 - `sudo apt install npm`
 
-## 3. Launch the Docker-compose file (located in the same directory)  
+## 3. Create the nodeapp.conf file in the working directory:
+
+<details markdown=1><summary markdown="span">nodeapp.conf</summary>
+
+```
+input {
+  tcp {
+    port => 5000  # Choose any available port, we'll use this in Node.js app to send logs.
+    codec => json_lines  # Assumes your logs are in JSON format.
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["elasticsearch:9200"]  # Replace 'elasticsearch' with the hostname or IP of your Elasticsearch instance.
+  }
+}
+```
+
+## 3. Create and launch the Docker-compose file (located in the same directory)  
 
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
    
@@ -494,25 +513,7 @@ After Bunyan sends logs to Logstash, Logstash can be configured with input, filt
 
 - **Output**: This could be set to various destinations, such as Elasticsearch, a file, or another service.
 
-### Create the nodeapp.conf file in the working directory:
-
-<details markdown=1><summary markdown="span">nodeapp.conf</summary>
-
-```
-input {
-  tcp {
-    port => 5000  # Choose any available port, we'll use this in Node.js app to send logs.
-    codec => json_lines  # Assumes your logs are in JSON format.
-  }
-}
-
-output {
-  elasticsearch {
-    hosts => ["elasticsearch:9200"]  # Replace 'elasticsearch' with the hostname or IP of your Elasticsearch instance.
-  }
-}
-```
-</details>
+### **The nodeapp.conf file was created during the previous steps**
 
 ### **Log Overrides and Middleware**
 
