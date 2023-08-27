@@ -258,7 +258,7 @@ output {
 
 </details>
 
-## 3. Create and launch the Docker-compose file (located in the same directory)  
+## 4. Create and launch the Docker-compose file (located in the same directory)  
 
 <details markdown=1><summary markdown="span">docker-compose.yml</summary>
    
@@ -294,7 +294,7 @@ services:
 
 - `docker-compose up`
 
-## 4. Retrieve the ip address of the dockerized logstash container
+Retrieve the ip address of the dockerized logstash container
 
 - `sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' logstash`
 
