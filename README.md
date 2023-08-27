@@ -1,5 +1,3 @@
-(the page is under development)
-
 
 # ELK (Elastic search, Logstash, Kibana) for monotoring logs of a Node.js Application
 
