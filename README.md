@@ -546,6 +546,8 @@ This solution provides a robust logging system that captures logs from various p
 
 ## 6. Launch the app and click a few times at any links to emit the logs.
 
+<img width="1000" alt="S" src="[https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/d8bea94a-3de3-4614-a172-0fea507a1994](https://github.com/otammato/6_ELK_monitoring_NodeJS_logs/assets/104728608/fe9bae98-79a2-4714-bd3b-a8001acb08a2)">
+
 
 
 ## 7. Setting up kibana (index pattern and a dashboard)
