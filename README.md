@@ -544,7 +544,11 @@ This solution provides a robust logging system that captures logs from various p
 
 <br><br>
 
-## 6. Setting up kibana (index pattern and a dashboard)
+## 6. Launch the app and click a few times at any links to emit the logs.
+
+
+
+## 7. Setting up kibana (index pattern and a dashboard)
 
 <img width="1000" alt="Screenshot 2023-08-21 at 22 23 27" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/d8bea94a-3de3-4614-a172-0fea507a1994">
 <img width="1000" alt="Screenshot 2023-08-21 at 22 24 01" src="https://github.com/otammato/ELK_monitoring_NodeJS_logs/assets/104728608/efaa83da-1589-4737-9b2c-f5652b5c7e6d">
