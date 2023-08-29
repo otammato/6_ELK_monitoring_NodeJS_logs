@@ -554,7 +554,7 @@ node index.js
 
 <img width="1000" alt="S" src="https://github.com/otammato/6_ELK_monitoring_NodeJS_logs/assets/104728608/fe9bae98-79a2-4714-bd3b-a8001acb08a2">
 
-### to test the backend (mysql container) this image is available:
+### to test the backend (mysql container) this image is available on DockerHub:
 
 ```
 docker pull montcarotte/fullstack_nodejs_mysql_demo:mysql_server
