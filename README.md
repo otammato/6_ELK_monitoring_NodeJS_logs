@@ -545,7 +545,8 @@ This solution provides a robust logging system that captures logs from various p
 <br><br>
 
 ## 6. Launch the app and click a few times at any links to emit the logs.
-node.js app:
+
+### node.js app:
 
 ```js
 node index.js
@@ -553,13 +554,17 @@ node index.js
 
 <img width="1000" alt="S" src="https://github.com/otammato/6_ELK_monitoring_NodeJS_logs/assets/104728608/fe9bae98-79a2-4714-bd3b-a8001acb08a2">
 
-mysql container:
+### to test the backend (mysql container) this image is available:
+
 ```
 docker pull montcarotte/fullstack_nodejs_mysql_demo:mysql_server
 ```
 
 <img width="1000" alt="S" src="https://github.com/otammato/6_ELK_monitoring_NodeJS_logs/assets/104728608/3a67f57c-66c9-45a0-a3b5-97b07c554106">
 
+```
+docker run --name mysql_1 -p 3306:3306 -d mysql_server
+```
 
 <br><br>
 
